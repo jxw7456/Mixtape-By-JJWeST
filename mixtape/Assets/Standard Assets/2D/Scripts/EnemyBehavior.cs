@@ -20,7 +20,7 @@ public class EnemyBehavior : MonoBehaviour {
         {
             transform.position = target.position - move;
 
-            if (transform.position.x <= 60.0f)
+            if (transform.position.x <= 62.5f)
             {
                 goingLeft = false;
             }
@@ -30,7 +30,7 @@ public class EnemyBehavior : MonoBehaviour {
         {
             transform.position = target.position + move;
 
-            if (transform.position.x >= 82.0f)
+            if (transform.position.x >= 84.0f)
             {
                 goingLeft = true;
             }           
