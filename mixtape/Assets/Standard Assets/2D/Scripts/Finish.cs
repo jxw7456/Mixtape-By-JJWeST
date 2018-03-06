@@ -13,8 +13,6 @@ namespace UnityStandardAssets._2D
             {
                 trumpet = GetComponent<AudioSource>();
                 trumpet.Play();
-                //new WaitForSeconds(5);
-                //SceneManager.LoadScene(SceneManager.GetSceneAt(0).name);
             }
         }
     }

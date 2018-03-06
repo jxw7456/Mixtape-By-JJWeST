@@ -22,12 +22,13 @@ public class UIManager : MonoBehaviour {
         {
             if (Time.timeScale == 1.0f)
             {
+                Debug.Log("Paused");
                 Time.timeScale = 0.0f;
                 ShowPaused();
             }
             else if (Time.timeScale == 0.0f)
             {
-                Debug.Log("high");
+                Debug.Log("Play");
                 Time.timeScale = 1.0f;
                 HidePaused();
             }
