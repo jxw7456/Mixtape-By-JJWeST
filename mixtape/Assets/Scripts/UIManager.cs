@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class UIManager : MonoBehaviour {
 
@@ -16,7 +17,6 @@ public class UIManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
         // Uses the ESC button to pause and unpause the game
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -83,5 +83,24 @@ public class UIManager : MonoBehaviour {
         
         else
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    // Quits the Game
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    // Go to options menu
+    public void OptionsMenu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public AudioMixer audioMixer;
+
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("volume", volume);
     }
 }
